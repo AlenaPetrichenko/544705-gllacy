@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>""</title>
+	<title>Каталог магазина «Gllacy»</title>
 </head>
 <body>
 	<header class="main-header">
@@ -115,12 +115,13 @@
         <form class="filter" method="get" action="https://echo.htmlacademy.ru">
           <fieldset>
             <legend>Сортировка:</legend>
-            <ul class = "sorting">
-              <li class="filter-option">По популярности</li>
-              <li class="filter-option">Сначала недорогие</li>
-              <li class="filter-option">Сначала дорогие</li>
-              <li class="filter-option">По жирности</li>
-            </ul>
+            <label class="visually-hidden" for="sorting">Сортировка:</label>
+            <select class = "sorting" name = "sorting">
+              <option class="filter-option">По популярности</option>
+              <option class="filter-option">Сначала недорогие</option>
+              <option class="filter-option">Сначала дорогие</option>
+              <option class="filter-option">По жирности</option>
+            </select>
           </fieldset>
           <fieldset>
             <legend>Цена:</legend>
