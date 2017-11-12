@@ -8,16 +8,58 @@
 	<header class="main-header">
 		<nav class="main-navigation">
         	<a class="main-header-logo">
-          		<img src="img/logo.png" width="111" height="24" alt="Логотип магазина «Gllacy»">
+          		<img src="img/logo.svg" width="111" height="24" alt="Логотип магазина «Gllacy»">
         	</a>
         	<ul class="site-navigation">
-          		<li><a href="catalog.html">Каталог</a></li>
+          		<li>
+          			<a href="catalog.html">Каталог</a>
+          			<ul class="catalog-variants">
+          				<li>
+          					<a href="catalog-new.html">Новинки</a>
+          				</li>
+          				<li>
+          					<a href="catalog.html">Сливочное</a>
+          				</li>
+          				<li>
+          					<a href="catalog-sherbet.html">Щербеты</a>
+          				</li>
+          				<li>
+          					<a href="catalog-fruit_ice.html">Фруктовый лед</a>
+          				</li>
+          				<li>
+          					<a href="catalog-melorin.html">Мелорин</a>
+          				</li>
+          			</ul>
+          		</li>
           		<li><a href="delivery_payment.html">Доставка и оплата</a></li>
           		<li><a href="about_company.html">О компании</a></li>
 			</ul>               	                 
         	<ul class="user-navigation">
-        		<li><a href="navigation-search.html">Поиск</a></li>
-          		<li class="login-link"><a href="navigation-link.html">Вход</a></li>          		
+        		<li>
+        			<a href="navigation-search.html">Поиск</a>
+        			<form>
+        				<label class="visually-hidden" for="search">Поиск</label>
+          				<input type="search" name ="search" placeholder="Что ищем?">
+        			</form>
+        		</li>
+          		<li class="login-link">
+          			<a href="login.html">Вход</a>
+          			<form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+          				<p class="login-item">
+          					<label class="visually-hidden" for="link-email">Электронная почта</label>
+          					<input class="email-icon" id="link-email" type="email" name ="email" placeholder="Электронная почта">
+          				</p>
+          				<p class="login-item">          				
+          					<label class="visually-hidden" for="link-password">Пароль</label>
+          					<input class="password-icon" id="link-password" type="password" name="password" placeholder="Пароль">
+          				</p>
+          				<button class="button" type="submit">Войти</button>
+          				<p class="login-password-info">
+          					<a class="restore" href="#">Забыли пароль?</a><br>
+          					<a class="check_in" href="#">Новая регистрация</a>
+          				</p>
+          			</form>
+          		</li>          		
           		<li><a href="navigation-basket.html">Корзина</a></li>
         	</ul>        	
       	</nav>
@@ -32,19 +74,19 @@
     		<label for="slider1_1"></label>
     		<div class="slider-item">
         		<p>Крем-брюле и пломбир с малиновым джемом</p>
-        		<img src="img/slider1.png" alt=''>
+        		<img src="img/slider1.png" alt="Крем-брюле и пломбир с малиновым джемом">
     		</div>
     		<input type="radio" name="slider1" id="slider1_2">
     		<label for="slider1_2"></label>
     		<div class="slider-item">
         		<p>Шоколадный пломбир и лимонный сорбет</p>
-        		<img src="img/slider2.png" alt=''>
+        		<img src="img/slider2.png" alt="Шоколадный пломбир и лимонный сорбет">
     		</div>
     		<input type="radio" name="slider1" id="slider1_3">
     		<label for="slider1_3"></label>
     		<div class="slider-item">
         		<p>Пломбир с помадкой и клубничный щербет</p>
-        		<img src="img/slider3.png" alt=''>
+        		<img src="img/slider3.png" alt="Пломбир с помадкой и клубничный щербет">
     		</div>
     		<a class="button" href="#">Давайте оба!</a>
 		</section>
@@ -67,8 +109,10 @@
 			<h2 class="visually-hidden">Самое популярное мороженное</h2>
 			<ul class="popular-list">
 				<li class="popular-item">
-					<h3>ХИТ</h3>
-					<p class="popular-price">310p</p>
+					<span>ХИТ</span>
+					<p class="popular-price">
+						310 <span class="visually-hidden">рублей</span>
+					</p>
 					<span class="popular-weight">/кг</span>
 					<a href="catalog-item.html">
 						<p class="popular-description">Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
@@ -78,8 +122,10 @@
               		</a>
 				</li>
 				<li class="popular-item">
-					<h3>ХИТ</h3>
-					<p class="popular-price">380p</p>
+					<span>ХИТ</span>
+					<p class="popular-price">
+						380 <span class="visually-hidden">рублей</span>
+					</p>
 					<span class="popular-weight">/кг</span>
 					<a href="catalog-item.html">
 						<p class="popular-description">Сливочно-кофейное с кусочками шоколада</p>
@@ -89,8 +135,10 @@
               		</a>
 				</li>
 				<li class="popular-item">
-					<h3>ХИТ</h3>
-					<p class="popular-price">355p</p>
+					<span>ХИТ</span>
+					<p class="popular-price">
+						355 <span class="visually-hidden">рублей</span>
+					</p>
 					<span class="popular-weight">/кг</span>
 					<a href="catalog-item.html">
 						<p class="popular-description">Сливочно-клубничное с присыпкой из белого шоколада</p>
@@ -100,8 +148,10 @@
               		</a>
 				</li>
 				<li class="popular-item">
-					<h3>ХИТ</h3>
-					<p class="popular-price">415p</p>
+					<span>ХИТ</span>
+					<p class="popular-price">
+						415 <span class="visually-hidden">рублей</span>
+					</p>
 					<span class="popular-weight">/кг</span>
 					<a href="catalog-item.html">
 						<p class="popular-description">Сливочное крем-брюле с карамельной подливкой</p>
@@ -151,20 +201,41 @@
 		</section>
 		<section class="contacts">
 			<h2 class="visually-hidden">Контактная информация</h2>
-        	<p class="contacts-address">
-           		Адрес главного офиса<br>
-           		и офлайн-магазина:<br>
-           		<b> ул. Большая Конюшенная<br>
-           		19/8, Санкт-Петербург
-           		</b>
-        	</p>
-        	<p class="contacts-phone">
-          		Для заказов по телефону:<br>
-          		<a href="tel:+88124502525"> 8 (812) 450-25-25</a><br>
-          		(с 10 до 20 ежедневно)
-        	</p>			
-        	<!-- Здесь будет форма -->
+        	<div>
+        		<p class="contacts-address">
+           			Адрес главного офиса<br>
+           			и офлайн-магазина:<br>
+           			<b> ул. Большая Конюшенная<br>
+           			19/8, Санкт-Петербург
+           			</b>
+        		</p>
+        		<p class="contacts-phone">
+          			Для заказов по телефону:<br>
+          			<a href="tel:+88124502525"> 8 (812) 450-25-25</a><br>
+          			(с 10 до 20 ежедневно)
+        		</p>	
+        	</div>		
+        	<form class="feedback" action="https://echo.htmlacademy.ru" method="post">
+        		<p>Мы обязательно вам ответим!</p>
+        		<p class="feedback-item">
+        			<label class="visually-hidden" for="feedback-name">Ваше имя</label>
+              		<input class="name-icon" id="feedback-name" type="text" name ="text" placeholder="Как вас зовут?">	
+        		</p>
+        		<p class="feedback-item">
+        			<label class="visually-hidden" for="feedback-email">Электронная почта</label>
+              		<input class="email-icon" id="feedback-email" type="email" name ="email" placeholder="Ваша почта для ответа?">
+        		</p>
+        		<p class="feedback-item">
+        			<label class="visually-hidden" for="feedback-answer">Ваш отзыв</label>
+        			<textarea class="answer-icon" name="feedback-answer" rows="10" placeholder="Напишите что-нибудь..."></textarea>
+        		</p>
+        		<button class="button" type="submit">Отправить</button>
+        		<button class="modal-close" type="button">Закрыть</button>
+        	</form>
         	<div class="map">
+        		<p>
+        			<img src="img/map.png" width="780" height="560" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
+      			</p>
         		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991032728616!2d30.3230833!3d59.9387942!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1510424967754" 
         		width="600" height="450" frameborder="0" style="border:0" allowfullscreen>
         		</iframe>
@@ -186,7 +257,7 @@
     	</ul>
     	<p class="footer-copyright">
     		<a class="footer-copyright-logo">
-          	<img src="img/academy-logo.svg" width="111" height="24" alt="Логотип «HTML Academy»">
+          	<img src="img/logo-htmlacademy.svg" width="111" height="24" alt="Логотип «HTML Academy»">
         	</a>
         	Сделано в <a class="button" href="https://htmlacademy.ru">HTML Academy</a> © 2017        
       	</p>   
