@@ -29,6 +29,7 @@ a {
 
 .site-navigation a,
 .user-navigation a {
+  text-decoration: underline;
   color: rgb(255, 255, 255);
 }
 
@@ -36,18 +37,13 @@ a {
 .site-navigation a:focus,
 .user-navigation a:hover,
 .user-navigation a:focus {
+  text-decoration: none;
   color: rgb(50, 50, 50);
   background-color: rgb(247, 246, 243);
 }
 
 .catalog-variants {
   box-shadow: 2px 8px 20px 5px rgba(0, 0, 0, 0.3);
-}
-.catalog-variants a {
-  font-weight: normal;
-  background-color: #f8f7f4;
-  color: rgb(50, 50, 50);
-  display: none;
 }
 
 .catalog-variants a:hover {
@@ -66,6 +62,13 @@ a {
   display: block;
 }
 
+.catalog-variants a {
+  font-weight: normal;
+  text-decoration: none;
+  background-color: rgb(255, 255, 255);
+  color: rgb(50, 50, 50);
+  display: none;
+}
 
 /* не работает */
 .catalog-variants ul li:first-child {
@@ -74,10 +77,35 @@ a {
   color: rgb(50, 50, 50);
 }
 
+.login-password-info a{
+  font-size: 13px;
+  line-height: 1.846;
+  font-weight: normal;
+  text-decoration: underline;
+  color: rgb(50, 50, 50);
+}
+
+.work_time {
+  font-size: 14px;
+  line-height: 1.143;
+}
+.work_time a {
+  font-size: 22px;
+  color: rgb(255, 255, 255);
+  line-height: 1.091;
+}
+
+.slider p {
+  font-size: 60.468px;
+  line-height: 1.006;
+  text-align: center;
+}
+
 .promotion-list {
   font-size: 12px;
   line-height: 1.222;
 }
+
 .promotion-list h3 {
   font-size: 23px;
   font-weight: bold;
@@ -85,17 +113,29 @@ a {
 
 }
 
-.popular-list {
+.popular-list a,
+.catalog-list a {
   text-decoration: underline;
+  font-size: 10.502px;
+  line-height: 1.375;
+  font-weight: normal;
+  color: rgb(255, 255, 255);
+  text-align: center;
 }
 
-/*преимущества*/
+.popular-price,
+.catalog-list h3 {
+  font-size: 45px;
+  line-height: 1;
+  text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
+}
+
 .advantages-list {
   list-style: none;
 }
 
 .advantages-company {
-	line-height: 30px;
+  line-height: 1.25;
   font-size: 24px;
   color: rgb(50, 50, 50);
 
@@ -108,14 +148,28 @@ a {
   line-height: 22px;
 }
 
+.preview_post h2 {
+  font-size: 24px;
+  text-decoration: underline;
+  color: rgb(50, 50, 50);
+  line-height: 1.25;
+}
 
+.preview_post p {
+  font-size: 16px;
+  color: rgb(50, 50, 50);
+  line-height: 1.375;
+}
 
+.subscription p {
+  font-size: 16px;
+  color: rgb(90, 90, 90);
+  line-height: 1.375;
+}
 
-
-/*кнопки*/
 .button {
   font: inherit;
-  text-shadow: 1px 1px 3px #666,
+  text-shadow: 1px 1px 3px #666;
   text-align: center;
   color: #ffffff;
   vertical-align: middle;
@@ -130,7 +184,6 @@ a {
   background-image: -moz-linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
   background-image: -webkit-linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
   background-image: -ms-linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
-  /*background-image: linear-gradient( to top, rgb(231,74,53) 0%, rgb(242,104,67) 100%);*/
   box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.64);
 
   border: none;
@@ -149,15 +202,28 @@ a {
   box-shadow: inset 0px 2px 2px 0px rgba(148, 39, 24, 0.004);
 }
 
+.visually-hidden {
+  display: none;
 
+}
 
+.contacts,
+.contacts-phone a {
+  font-size: 14px;
+  font-weight: normal;
+  color: rgb(50, 50, 50);
+  line-height: 1.429;
+}
 
-/*ПЕРЕДЕЛАТЬ
-элементы формы*/
+.contacts-address b,
+.contacts-phone a {
+  font-size: 18px;
+  font-weight: bolder;
+  line-height: 1.333;
+}
+
 .appointment-item input {
   font: inherit;
-
-  /*background-color: transparent;*/
 	border: 2px solid #d3d3d2;
 }
 
@@ -173,29 +239,136 @@ a {
 	border-color: #d3d3d2;
 }
 
-
-
-
-
 .main-footer {
-  font-weight:normal;
+  font-weight: normal;
   color: rgb(255, 255, 255);
 }
 
+.footer-documentation {
+  list-style: none;
+}
 .footer,
 .footer-button { 
   color: rgb(255, 255, 255);
   text-decoration: underline;
 }
 
-.footer a:hover,
-.footer a:focus,
-.footer a:active,
+.footer:hover,
+.footer:focus,
+.footer:active,
 .footer-button:hover,
 .footer-button:focus,
 .footer-button:active {
   color: rgb(255, 188, 158);
 }
 
+.inner-page {
+  background-color: #9bafa4;
+}
 
+.site-navigation-current a {
+  background-color: rgb(208, 112, 88);
+}
 
+.site-navigation-current {
+  display: inline-block;
+}
+
+.site-navigation-current:hover .catalog-variants a {
+  display: block;
+}
+
+.container h1 {
+  font-size: 35px;
+  line-height: 1.171;
+}
+
+.breadcrumbs li{
+  font-weight: normal;
+  list-style: none;
+}
+.breadcrumbs a {
+  font-size: 14px;
+  color: rgb(255, 255, 255);
+  line-height: 1.143;
+  text-decoration: underline;
+}
+
+.breadcrumbs a:hover,
+.breadcrumbs a:focus {
+  text-decoration: none;
+  color: rgb(50, 50, 50);
+  background-color: rgb(247, 246, 243);
+}
+
+.breadcrumbs .breadcrumbs-current {
+  font-size: 14px;
+  color: rgb(255, 255, 255);
+  line-height: 1.143;
+  text-decoration: none;
+}
+
+.filter fieldset {
+  border: none;
+}
+
+.filter {
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.125;
+}
+
+.filter legend,
+.filter p{
+  font-size: 14px;
+  line-height: 1.143;
+
+}
+
+.sorting option:first-child {
+  font-weight: bold;
+  color: rgb(50, 50, 50);
+  line-height: 1.125;
+}
+
+.filter-button {
+  background-color: rgba(0.1, 0.1, 0.1, 0);
+  text-align: center;
+  color: #ffffff;
+  -webkit-border-radius: 30px;
+  border: 2px, solid, rgb(255, 255, 255);
+}
+
+.filter-button:hover,
+.filter-button:focus {
+  background-color: rgb(255, 255, 255);
+  color: rgb(50, 50, 50);
+  border: solid, 2px, rgb(255, 255, 255);
+}
+
+.filter-button:active {
+  background-color: #eaeaea;
+  color: rgb(50, 50, 50);
+  border: 2px, solid, rgb(255, 255, 255);
+}
+
+.pagination-list,
+.pagination-button {
+  font-weight: normal;
+  list-style: none;
+  color: rgb(255, 255, 255);
+}
+
+.pagination-list a,
+.pagination-button {
+  color: rgb(255, 255, 255);
+}
+
+.pagination-item a:hover,
+.pagination-item a:focus,
+.pagination-button:hover,
+.pagination-button:focus {
+  border-radius: 50%;
+  color: rgb(50, 50, 50);
+  background-color: rgb(255, 255, 255);
+}

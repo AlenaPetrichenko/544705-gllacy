@@ -3,8 +3,11 @@
 <head>
 	<meta charset="utf-8">
 	<title>Каталог магазина «Gllacy»</title>
+  <link href="https://fonts.google.com/specimen/Roboto" rel="stylesheet">
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 </head>
-<body>
+<body class="inner-page">
 	<header class="main-header">
 		<nav class="main-navigation">
       <a class="main-header-logo" href="index.html">
@@ -15,28 +18,28 @@
           <a href="catalog.html">Каталог</a>
           <ul class="catalog-variants">
             <li>
-              <a href="catalog-new.html">Новинки</a>
+              <a href="#">Новинки</a>
             </li>
             <li>
               <a href="catalog.html">Сливочное</a>
             </li>
             <li>
-              <a href="catalog-sherbet.html">Щербеты</a>
+              <a href="#">Щербеты</a>
             </li>
             <li>
-              <a href="catalog-fruit_ice.html">Фруктовый лед</a>
+              <a href="#">Фруктовый лед</a>
             </li>
             <li>
-              <a href="catalog-melorin.html">Мелорин</a>
+              <a href="#">Мелорин</a>
             </li>
           </ul>
         </li>      
-        <li><a href="delivery_payment.html">Доставка и оплата</a></li>
-        <li><a href="about_company.html">О компании</a></li>
+        <li><a href="#">Доставка и оплата</a></li>
+        <li><a href="#">О компании</a></li>
 			</ul>
 			<ul class="user-navigation">
         <li>
-          <a href="navigation-search.html">Поиск</a>
+          <a href="#">Поиск</a>
           <form>
             <label class="visually-hidden" for="search">Поиск</label>
             <input type="search" name ="search" placeholder="Что ищем?">
@@ -66,7 +69,7 @@
             <table>
               <tr class="basket-item">
                 <td class="basket-remove">
-                  <p class="visually-hidden">Закрыть</p>
+                  <button type ="button">Закрыть</button>
                 </td>
                 <td class="basket-product">
                   <a href="#">Пломбир с апельсиновым джемом</a>
@@ -117,15 +120,16 @@
             <legend>Сортировка:</legend>
             <label class="visually-hidden" for="sorting">Сортировка:</label>
             <select class = "sorting" name = "sorting">
-              <option class="filter-option">По популярности</option>
-              <option class="filter-option">Сначала недорогие</option>
-              <option class="filter-option">Сначала дорогие</option>
-              <option class="filter-option">По жирности</option>
+              <option class="filter-option">по популярности</option>
+              <option class="filter-option">сначала недорогие</option>
+              <option class="filter-option">сначала дорогие</option>
+              <option class="filter-option">по жирности</option>
             </select>
           </fieldset>
           <fieldset>
             <legend>Цена:</legend>
             <div class="skroll">
+              <p> 100 руб. – 500 руб.</p>
               <button type="button" class="skroll_left"></button>
               <button type="button" class="skroll_right"></button>
               <div class="skroll_field"></div>
@@ -186,7 +190,7 @@
               </li>
             </ul>
           </fieldset>
-          <button type="submit" class="filter-button button">Применить</button>
+          <button type="submit" class="filter-button">Применить</button>
         </form>
       </section>     
       <section class="catalog">
@@ -315,7 +319,7 @@
         </ul>
         <ul class="pagination-list">
           <li>
-            <button class="button pagination-button pagination-button-back" type="button">
+            <button class="pagination-button pagination-button-back" type="button">
               &lt;
             </button>
           </li>
@@ -325,7 +329,7 @@
           <li class="pagination-item"><a href="#">4</a></li>
           <li class="pagination-item"><a href="#">5</a></li>
           <li>
-            <button class="button pagination-button pagination-button-next" type="button">
+            <button class="pagination-button pagination-button-next" type="button">
               &gt;
             </button>
           </li>
@@ -339,17 +343,17 @@
         	<a class="social-button" href="#">Фейсбук</a>
         	<a class="social-button" href="#">Вконтакте</a>
     	</div>
-    	<ul class="main-documentation">
-    		<li><a class="footer" href="provider.html"><b>Для поставщиков</b></a></li>
-      		<li><a class="footer" href="production.html">О производстве</a></li>
-      		<li><a class="footer" href="documentation.html">Наши документы</a></li>
-      		<li><a class="footer" href="standards.html">Экологические стандарты</a></li>
+    	<ul class="footer-documentation">
+    		<li><a class="footer" href="#"><b>Для поставщиков</b></a></li>
+      		<li><a class="footer" href="#">О производстве</a></li>
+      		<li><a class="footer" href="#">Наши документы</a></li>
+      		<li><a class="footer" href="#">Экологические стандарты</a></li>
     	</ul>
     	<p class="footer-copyright">
     		<a class="footer-copyright-logo">
           	<img src="img/logo-htmlacademy.svg" width="111" height="24" alt="Логотип «HTML Academy»">
         	</a>
-        	Сделано в <a class="button" href="https://htmlacademy.ru">HTML Academy</a> © 2017        
+        	Сделано в <a class="footer-button" href="https://htmlacademy.ru">HTML Academy</a> © 2017        
       	</p>   
     </footer>
 </body>
