@@ -1,0 +1,201 @@
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+
+  background-color: #849d8f;
+}
+
+/*отмена подчеркиваний у ссылок*/
+a {
+  text-decoration: none;
+}
+
+.main-navigation {
+  color: rgb(255, 255, 255);
+}
+
+/*отмена маркеров у списка*/
+.site-navigation,
+.user-navigation,
+.catalog-variants {
+  list-style: none;  
+}
+
+.site-navigation a,
+.user-navigation a {
+  color: rgb(255, 255, 255);
+}
+
+.site-navigation a:hover,
+.site-navigation a:focus,
+.user-navigation a:hover,
+.user-navigation a:focus {
+  color: rgb(50, 50, 50);
+  background-color: rgb(247, 246, 243);
+}
+
+.catalog-variants {
+  box-shadow: 2px 8px 20px 5px rgba(0, 0, 0, 0.3);
+}
+.catalog-variants a {
+  font-weight: normal;
+  background-color: #f8f7f4;
+  color: rgb(50, 50, 50);
+  display: none;
+}
+
+.catalog-variants a:hover {
+  background-color: #fbded7;
+}
+
+.catalog-variants a:active {
+  background-color: #f6b5a5;
+}
+
+.navigation-catalog {
+  display: inline-block;
+}
+
+.navigation-catalog:hover .catalog-variants a {
+  display: block;
+}
+
+
+/* не работает */
+.catalog-variants ul li:first-child {
+  font-weight: bold;
+  background-color: #f8f7f4;
+  color: rgb(50, 50, 50);
+}
+
+.promotion-list {
+  font-size: 12px;
+  line-height: 1.222;
+}
+.promotion-list h3 {
+  font-size: 23px;
+  font-weight: bold;
+  line-height: 1.171;
+
+}
+
+.popular-list {
+  text-decoration: underline;
+}
+
+/*преимущества*/
+.advantages-list {
+  list-style: none;
+}
+
+.advantages-company {
+	line-height: 30px;
+  font-size: 24px;
+  color: rgb(50, 50, 50);
+
+}
+
+.advantages-list {
+  line-height: 30px;
+  font-weight:normal;
+  color: rgb(50, 50, 50);
+  line-height: 22px;
+}
+
+
+
+
+
+/*кнопки*/
+.button {
+  font: inherit;
+  text-shadow: 1px 1px 3px #666,
+  text-align: center;
+  color: #ffffff;
+  vertical-align: middle;
+  width: 165px;
+  height: 46px;
+
+  /*Скругленные углы*/
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+
+  background-image: -moz-linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
+  background-image: -webkit-linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
+  background-image: -ms-linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
+  /*background-image: linear-gradient( to top, rgb(231,74,53) 0%, rgb(242,104,67) 100%);*/
+  box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.64);
+
+  border: none;
+}
+
+.button:hover,
+.button:focus {
+  background-image: linear-gradient( 90deg, #f17c64, #f17c64);
+  box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.64);
+}
+
+.button:active {
+  background-image: -moz-linear-gradient( 90deg, rgb(242,104,67) 0%, rgb(231,74,53) 100%);
+  background-image: -webkit-linear-gradient( 90deg, rgb(242,104,67) 0%, rgb(231,74,53) 100%);
+  background-image: -ms-linear-gradient( 90deg, rgb(242,104,67) 0%, rgb(231,74,53) 100%);
+  box-shadow: inset 0px 2px 2px 0px rgba(148, 39, 24, 0.004);
+}
+
+
+
+
+/*ПЕРЕДЕЛАТЬ
+элементы формы*/
+.appointment-item input {
+  font: inherit;
+
+  /*background-color: transparent;*/
+	border: 2px solid #d3d3d2;
+}
+
+.appointment-item input:hover {
+	border: 2px solid #c7c6c5;
+}
+
+.appointment-item input:focus {
+	border-color: #8fbdec;
+}
+
+.appointment-item input:active {
+	border-color: #d3d3d2;
+}
+
+
+
+
+
+.main-footer {
+  font-weight:normal;
+  color: rgb(255, 255, 255);
+}
+
+.footer,
+.footer-button { 
+  color: rgb(255, 255, 255);
+  text-decoration: underline;
+}
+
+.footer a:hover,
+.footer a:focus,
+.footer a:active,
+.footer-button:hover,
+.footer-button:focus,
+.footer-button:active {
+  color: rgb(255, 188, 158);
+}
+
+
+
