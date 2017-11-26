@@ -14,6 +14,7 @@ body {
 /*отмена подчеркиваний у ссылок*/
 a {
   text-decoration: none;
+
 }
 
 .main-navigation {
@@ -24,7 +25,7 @@ a {
 .site-navigation,
 .user-navigation,
 .catalog-variants {
-  list-style: none;  
+  list-style: none;
 }
 
 .site-navigation a,
@@ -167,13 +168,13 @@ a {
   line-height: 1.375;
 }
 
-.button {
+.button:not(.footer-button):not(.filter-button) {
   font: inherit;
   text-shadow: 1px 1px 3px #666;
   text-align: center;
   color: #ffffff;
   vertical-align: middle;
-  width: 165px;
+  width: 135px;
   height: 46px;
 
   /*Скругленные углы*/
@@ -189,13 +190,13 @@ a {
   border: none;
 }
 
-.button:hover,
-.button:focus {
+.button:not(.footer-button):not(.filter-button):hover,
+.button:not(.footer-button):not(.filter-button):focus {
   background-image: linear-gradient( 90deg, #f17c64, #f17c64);
   box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.64);
 }
 
-.button:active {
+.button:not(.footer-button):not(.filter-button):active {
   background-image: -moz-linear-gradient( 90deg, rgb(242,104,67) 0%, rgb(231,74,53) 100%);
   background-image: -webkit-linear-gradient( 90deg, rgb(242,104,67) 0%, rgb(231,74,53) 100%);
   background-image: -ms-linear-gradient( 90deg, rgb(242,104,67) 0%, rgb(231,74,53) 100%);
@@ -248,7 +249,7 @@ a {
   list-style: none;
 }
 .footer,
-.footer-button { 
+.footer-button{
   color: rgb(255, 255, 255);
   text-decoration: underline;
 }
@@ -267,6 +268,7 @@ a {
 }
 
 .site-navigation-current a {
+  text-decoration: none;
   background-color: rgb(208, 112, 88);
 }
 
@@ -287,6 +289,7 @@ a {
   font-weight: normal;
   list-style: none;
 }
+
 .breadcrumbs a {
   font-size: 14px;
   color: rgb(255, 255, 255);
@@ -294,18 +297,17 @@ a {
   text-decoration: underline;
 }
 
+.breadcrumbs.breadcrumbs-current a{
+  font-size: 14px;
+  color: rgb(255, 255, 255);
+  line-height: 1.143;
+}
+
 .breadcrumbs a:hover,
 .breadcrumbs a:focus {
   text-decoration: none;
   color: rgb(50, 50, 50);
   background-color: rgb(247, 246, 243);
-}
-
-.breadcrumbs .breadcrumbs-current {
-  font-size: 14px;
-  color: rgb(255, 255, 255);
-  line-height: 1.143;
-  text-decoration: none;
 }
 
 .filter fieldset {
@@ -371,4 +373,68 @@ a {
   border-radius: 50%;
   color: rgb(50, 50, 50);
   background-color: rgb(255, 255, 255);
+}
+
+/* ----- Сеточные стили ----- */
+
+
+html,
+body {
+  min-width: 1200px;
+  min-height: 2416px;
+}
+
+body {
+  /* Временно для сетки */
+  /*background-image: url('img/gllacy-index-1200.jpg');
+  background-size: 1372px auto;
+  background-repeat: no-repeat;*/
+}
+.main-header {
+  margin-bottom: 0;
+
+  /* Временно для сетки */
+  min-height: 75px;
+  outline: 1px solid yellow;
+}
+
+.main-navigation {
+  display: flex;
+  flex-direction: column;
+
+  /* Временно для сетки */
+  min-height: 285px;
+  background-color: transparent;
+  outline: 1px solid yellow;
+}
+.main-header-logo {
+  width: 165px;
+  height: 75px;
+
+  /* Временно для сетки */
+  /*display: block;*/
+  outline: 1px solid yellow;
+}
+
+.site-navigation {
+  margin: 0;
+  padding: 0;
+  align-items: center;
+
+  list-style: none;
+
+  /* Временно для сетки */
+  min-height: 70px;
+  outline: 1px solid yellow;
+}
+
+.user-navigation {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  /* Временно для сетки */
+  min-height: 70px;
+  outline: 1px solid yellow;
 }
