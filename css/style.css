@@ -280,6 +280,13 @@ a {
   text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
 }
 
+.popular-description {
+  font-size: 10.502px;
+  line-height: 1.375;
+  text-align: center;
+}
+
+
 .advantages-list {
   list-style: none;
 }
@@ -622,15 +629,12 @@ body {
   /* Временно для сетки */
   min-height: 280px;
   display: flex;
+  list-style: none;
   outline: 1px solid white;
 }
 .slider-controls {
   margin: 0;
   padding: 0;
-
-  display: flex;
-  flex-direction: row;
-  list-style: none;
 
   /* Временно для сетки */
   width: 100px;
@@ -645,11 +649,6 @@ body {
   margin-left: auto;
   margin-right: auto;
 
-  display: flex;
-  flex-direction: row;
-
-  list-style: none;
-
   /* Временно для сетки */
   width: 700px;
   min-height: 280px;
@@ -658,12 +657,14 @@ body {
 
 .promotion-list {
   margin-bottom: 0;
+  padding: 0;
   display: flex;
   flex-direction: row;
-  /*justify-content: space-between;*/
+  justify-content: space-between;
 
   /* Временно для сетки */
-  min-height: 280px;
+  width: 560;
+  min-height: 230px;
   outline: 1px solid red;
 }
 
@@ -712,4 +713,155 @@ body {
   outline: 1px solid green;
 }
 
+.popular-list {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
 
+  list-style: none;
+  /* Временно для сетки */
+  min-height: 52px;
+  outline: 1px solid pink;
+}
+
+.popular-item {
+  margin-bottom: 20px;
+  margin-right: 26px;
+
+  /* Временно для сетки */
+  min-width: 267px;
+  min-height: 330px;
+  outline: 1px solid orange;
+}
+
+.popular-item:last-child {
+  margin-right: 0;
+}
+
+.popular img {
+    border-radius: 100%;
+}
+
+.advantages {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  /*justify-content: space-between;*/
+
+  list-style: none;
+  /* Временно для сетки */
+  min-height: 52px;
+  outline: 1px solid green;
+}
+
+.advantages-company {
+  margin-top: 10px;
+
+  /* Временно для сетки */
+  min-height: 56px;
+  outline: 1px solid red;
+}
+
+.advantages-list {
+  margin: 0;
+  padding: 0;
+  /*margin-bottom: 20px;
+  margin-right: 26px;*/
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  /* Временно для сетки */
+  min-height: 179px;
+  outline: 1px solid red;
+}
+
+.advantages-item {
+  margin-right: 26px;
+  display: flex;
+  justify-content: space-between;
+
+  /* Временно для сетки */
+  width: 540px;
+  min-height: 79px;
+  outline: 1px solid orange;
+}
+
+.advantages-item img {
+  margin-bottom: auto;
+
+  /* Временно для сетки */
+  width: 51px;
+  min-height: 51px;
+  outline: 1px solid white;
+}
+
+.advantages-item p {
+  /* Временно для сетки */
+  width: 478px;
+  min-height: 64px;
+  outline: 1px solid white;
+}
+
+.blog-wrapper {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+
+  list-style: none;
+  /* Временно для сетки */
+  min-height: 202px;
+  outline: 1px solid red;
+}
+
+.preview_post {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column-reverse;
+  /* Временно для сетки */
+  width: 560px;
+  min-height: 222px;
+  outline: 1px solid yellow;
+}
+
+.subscription {
+  /*margin-right: 26px;*/
+  display: flex;
+  justify-content: space-between;
+
+  /* Временно для сетки */
+  width: 560px;
+  min-height: 222px;
+  outline: 1px solid yellow;
+}
+
+.post-title {
+  /*margin: 0;*/
+  /*margin-bottom: auto;*/
+  /*margin-right: 26px;*/
+  display: flex;
+  /*justify-content: space-between;*/
+
+  /* Временно для сетки */
+  width: 281px;
+  min-height: 82px;
+  outline: 1px solid white;
+}
+
+.post-new {
+  /*margin: 0;*/
+  margin-bottom: auto;
+  /*margin-right: 26px;*/
+  display: flex;
+  /*justify-content: space-between;*/
+
+  /* Временно для сетки */
+  width: 165px;
+  min-height: 17px;
+  outline: 1px solid white;
+}
