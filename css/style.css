@@ -637,15 +637,18 @@ body {
 }
 
 .slider {
+  padding-top: 265px;
+
   /* Временно для сетки */
-  min-height: 280px;
-  flex-direction: row;
-  justify-content: space-between;
+  min-height: 256px;
+  display: flex;
+  flex-direction: column;
   list-style: none;
   outline: 1px solid white;
 }
 
 .slider-controls {
+  padding-bottom: 15px; 
   /* Временно для сетки */
   width: 100px;
   min-height: 30px;
@@ -653,12 +656,13 @@ body {
 }
 
 .slider-list {
+
   margin-left: auto;
   margin-right: auto;
 
   /* Временно для сетки */
   width: 700px;
-  min-height: 280px;
+  min-height: 210px;
   outline: 1px solid yellow;
 }
 
@@ -761,19 +765,25 @@ body {
 }
 
 .popular-hit {
+  display: block;
   border-radius: 100%;
   min-width: 61px;
   min-height: 61px;
   outline: 1px solid yellow;
 }
 
-.popular-price{
+.popular-price {
+  display: block;
+}
+
+.price-wrapper {
   min-width: 158px;
   min-height: 37px;
   outline: 1px solid yellow;
 }
 
 .popular-description {
+  display: block;
   min-width: 252px;
   min-height: 41px;
   outline: 1px solid yellow;
@@ -883,23 +893,31 @@ body {
 .subscription {
   /*margin-right: 26px;*/
   display: flex;
-  justify-content: space-between;
+  /*justify-content: space-between;*/
+
+  background: #92cdff;
+  background: -webkit-repeating-linear-gradient(-45deg, #f8f7f4 0, #f8f7f4 7px, #92cdff 7px, #92cdff 14px, #f8f7f4 14px, #f8f7f4 21px, #fe9e90 21px, #fe9e90 28px);
+  background: -o-repeating-linear-gradient(-45deg, #f8f7f4 0, #f8f7f4 7px, #92cdff 7px, #92cdff 14px, #f8f7f4 14px, #f8f7f4 21px, #fe9e90 21px, #fe9e90 28px);
+  background: -moz-repeating-linear-gradient(-45deg, #f8f7f4 0, #f8f7f4 7px, #92cdff 7px, #92cdff 14px, #f8f7f4 14px, #f8f7f4 21px, #fe9e90 21px, #fe9e90 28px);
+  background: repeating-linear-gradient(-45deg, #f8f7f4 0, #f8f7f4 7px, #92cdff 7px, #92cdff 14px, #f8f7f4 14px, #f8f7f4 21px, #fe9e90 21px, #fe9e90 28px);
+  border-radius: 15px;
 
   /* Временно для сетки */
   width: 560px;
   min-height: 222px;
   outline: 1px solid yellow;
 }
-/*.post-wrapper {
-	margin: 0;
-	display: flex;
-  flex-direction: column;
 
-/* Временно для сетки 
-  width: 282px;
-  min-height: 111px;
-  outline: 1px solid black;
-}*/
+.subscription-background {
+  display: flex;
+  background: "#f8f7f4";
+  border-radius: 15px;
+  /* Временно для сетки */
+  width: 547px;
+  min-height: 211px;
+  outline: 1px solid yellow;
+}
+
 .post-title {
 margin: 20px;
 margin-top: 10px;
