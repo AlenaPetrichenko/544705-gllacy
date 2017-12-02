@@ -31,6 +31,7 @@ a {
 .site-navigation a,
 .user-navigation a {
   text-decoration: underline;
+  color:red;
   color: rgb(255, 255, 255);
 }
 
@@ -261,7 +262,6 @@ a {
 
 .promotion-button
  {
- 	/*padding-top: 10px;*/
 	padding-right: 25px;
 	padding-left: 25px;
 }
@@ -281,7 +281,7 @@ a {
 .popular-list a,
 .catalog-list a {
   text-decoration: underline;
-  font-size: 10.502px;
+  font-size: 16px;
   line-height: 1.375;
   font-weight: normal;
   color: rgb(255, 255, 255);
@@ -294,13 +294,6 @@ a {
   line-height: 1;
   text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
 }
-
-.popular-description {
-  font-size: 10.502px;
-  line-height: 1.375;
-  text-align: center;
-}
-
 
 .advantages-list {
   list-style: none;
@@ -338,6 +331,14 @@ a {
   color: rgb(90, 90, 90);
   line-height: 1.375;
 }
+
+.subscription-button {
+  font-size: 18px;
+  line-height: 1.333;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
 
 .visually-hidden {
   display: none;
@@ -521,11 +522,28 @@ display: block;
 .login-form {
   background-color: rgb(255, 255, 255);
   color: rgb(50, 50, 50);
-    display: none;
+  padding: 5px 20px;
+  border-radius: 5px;
+  display: none;
 }
 
-*/
+.email-icon,
+.password-icon,
+.name-icon {
+  width:225px;
+  height:8px;
+  padding:18px 0;
+  padding-left: 15px;
 
+  border:1px solid #d3d3d2;
+  border-radius:6px;
+}
+
+.login-button {
+  font-size: 18px;
+  line-height: 1.333;
+  padding: 10px 28px;
+}
 
 /* ----- Сеточные стили ----- */
 
@@ -546,7 +564,7 @@ body {
 
   /* Временно для сетки */
   min-height: 500px;
-  outline: 1px solid blue;
+  /*outline: 1px solid blue;*/
   box-sizing: border-box;
 }
 
@@ -555,7 +573,7 @@ body {
 
   /* Временно для сетки */
   min-height: 100px;
-  outline: 1px solid green;
+  /*outline: 1px solid green;*/
 }
 
 .main-navigation {
@@ -564,7 +582,7 @@ body {
 
   /* Временно для сетки */
   min-height: 55px;
-  outline: 1px solid red;
+ /* outline: 1px solid red;*/
 }
 
 .main-header-logo {
@@ -573,7 +591,7 @@ body {
   padding-top: 10px;
 
   /* Временно для сетки */
-  outline: 1px solid yellow;
+  /*outline: 1px solid yellow;*/
 }
 
 .site-navigation {
@@ -586,7 +604,7 @@ body {
 
   /* Временно для сетки */
   min-height: 70px;
-  outline: 1px solid yellow;
+  /*outline: 1px solid yellow;*/
 }
 
 .site-navigation a {
@@ -606,7 +624,7 @@ body {
 
   /* Временно для сетки */
   min-height: 70px;
-  outline: 1px solid yellow;
+  /*outline: 1px solid yellow;*/
 }
 
 .time-wrapper {
@@ -621,7 +639,7 @@ body {
   /* Временно для сетки */
   width: 167px;
   min-height: 43px;
-  outline: 1px solid yellow;
+  /*outline: 1px solid yellow;*/
 }
 
 .user-navigation a {
@@ -644,7 +662,7 @@ body {
   display: flex;
   flex-direction: column;
   list-style: none;
-  outline: 1px solid white;
+  /*outline: 1px solid white;*/
 }
 
 .slider-controls {
@@ -652,18 +670,17 @@ body {
   /* Временно для сетки */
   width: 100px;
   min-height: 30px;
-  outline: 1px solid yellow;
+  /*outline: 1px solid yellow;*/
 }
 
 .slider-list {
-
   margin-left: auto;
   margin-right: auto;
 
   /* Временно для сетки */
   width: 700px;
   min-height: 210px;
-  outline: 1px solid yellow;
+  /*outline: 1px solid yellow;*/
 }
 
 .promotion-list {
@@ -679,14 +696,14 @@ body {
   /* Временно для сетки */
   width: 560;
   min-height: 230px;
-  outline: 1px solid red;
+  /*outline: 1px solid red;*/
 }
 
 .promotion-item {
   /* Временно для сетки */
   width: 560px;
   min-height: 228px;
-  outline: 1px solid yellow;
+  /*outline: 1px solid yellow;*/
 }
 
 .promotion-title {
@@ -694,22 +711,22 @@ body {
   /* Временно для сетки */
   width: 319px;
   min-height: 37px;
-  outline: 1px solid green;
+  /*outline: 1px solid green;*/
 }
 
 .promotion-description {
-	margin: 20px;
+  margin: 20px;
   display: flex;
   flex-direction: column;
 
   /* Временно для сетки */
   width: 505px;
   min-height: 40px;
-  outline: 1px solid green;
+  /*outline: 1px solid green;*/
 }
 
 .promotion-wrapper {
-	margin-top: 40px;
+  margin-top: 40px;
   margin-left: auto;
   margin-right: 25px;
 
@@ -719,7 +736,7 @@ body {
   /* Временно для сетки */
   width: 190px;
   min-height: 44px;
-  outline: 1px solid green;
+  /*outline: 1px solid green;*/
 }
 
 .promotion-background-first {
@@ -739,16 +756,16 @@ body {
 }
 
 .popular-list {
-  /*justify-content: space-between;*/
   padding: 0;
   margin: 0;
+  margin-bottom: 35px;
 
   display: flex;
   list-style: none;
 
   /* Временно для сетки */
   min-height: 52px;
-  outline: 1px solid pink;
+  /*outline: 1px solid pink;*/
 }
 
 .popular-item {
@@ -757,7 +774,7 @@ body {
   
   min-width: 267px;
   min-height: 330px;
-  outline: 1px solid orange;
+  /*outline: 1px solid orange;*/
 }
 
 .popular-item:last-child {
@@ -767,37 +784,53 @@ body {
 .popular-hit {
   display: block;
   border-radius: 100%;
-  min-width: 61px;
-  min-height: 61px;
-  outline: 1px solid yellow;
+  width: 61px;
+  height: 61px;
+  margin-top: -270px;
+
+  /*outline: 1px solid yellow;*/
 }
 
-.popular-price {
+.popular-price img{
+  margin-top: -40px;
+  margin-left: -37px;
+  
   display: block;
 }
 
+.popular-weight {
+	display: block;
+	margin-left: 115px;
+	margin-top: -68px;
+	font-size: 28px;
+	text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);	
+}
+
 .price-wrapper {
+  margin-top: 147px;
+  display: block;
   min-width: 158px;
   min-height: 37px;
-  outline: 1px solid yellow;
+  /*outline: 1px solid yellow;*/
 }
 
 .popular-description {
   display: block;
+  margin-top: 32px;
   min-width: 252px;
   min-height: 41px;
-  outline: 1px solid yellow;
+  /*outline: 1px solid yellow;*/
 }
 
 .popular img {
   border-radius: 100%;
-  min-width: 267px;
-  min-height: 267px;
-  outline: 1px solid yellow;
+  min-width: 100%;
+  min-height: 100%;
+  /*outline: 1px solid yellow;*/
 }
 
 .advantages {
-	margin-bottom: 40px;
+  margin-bottom: 40px;
   display: flex;
   flex-direction: column;
   background-image: url("../img/waffle.jpg");
@@ -807,7 +840,7 @@ body {
 
   list-style: none;
   /* Временно для сетки */
-  outline: 1px solid green;
+  /*outline: 1px solid green;*/
 }
 
 .advantages-company {
@@ -818,7 +851,7 @@ body {
 
   /* Временно для сетки */
   min-height: 56px;
-  outline: 1px solid red;
+  /*outline: 1px solid red;*/
 }
 
 .advantages-list { 
@@ -827,7 +860,7 @@ body {
 
   /* Временно для сетки */
   min-height: 179px;
-  outline: 1px solid red;
+  /*outline: 1px solid red;*/
 }
 
 .advantages-list:nth-child(3n) {
@@ -843,7 +876,7 @@ body {
   /* Временно для сетки */
   width: 540px;
   min-height: 75px;
-  outline: 1px solid orange;
+  /*outline: 1px solid orange;*/
 }
 
 .advantages-item img {
@@ -852,7 +885,7 @@ body {
   /* Временно для сетки */
   width: 51px;
   min-height: 51px;
-  outline: 1px solid white;
+  /*outline: 1px solid white;*/
 }
 
 .advantages-item p {
@@ -860,7 +893,7 @@ body {
   /* Временно для сетки */
   width: 478px;
   min-height: 60px;
-  outline: 1px solid white;
+  /*outline: 1px solid white;*/
 }
 
 .blog-wrapper {
@@ -871,11 +904,10 @@ body {
   list-style: none;
   /* Временно для сетки */
   min-height: 202px;
-  outline: 1px solid red;
+  /*outline: 1px solid red;*/
 }
 
 .preview_post {
-  /*margin: 0;*/
   display: flex;
   flex-direction: column;
   
@@ -887,14 +919,11 @@ body {
   /* Временно для сетки */
   width: 560px;
   min-height: 222px;
-  outline: 1px solid yellow;
+  /*outline: 1px solid yellow;*/
 }
 
 .subscription {
-  /*margin-right: 26px;*/
   display: flex;
-  /*justify-content: space-between;*/
-
   background: #92cdff;
   background: -webkit-repeating-linear-gradient(-45deg, #f8f7f4 0, #f8f7f4 7px, #92cdff 7px, #92cdff 14px, #f8f7f4 14px, #f8f7f4 21px, #fe9e90 21px, #fe9e90 28px);
   background: -o-repeating-linear-gradient(-45deg, #f8f7f4 0, #f8f7f4 7px, #92cdff 7px, #92cdff 14px, #f8f7f4 14px, #f8f7f4 21px, #fe9e90 21px, #fe9e90 28px);
@@ -905,7 +934,7 @@ body {
   /* Временно для сетки */
   width: 560px;
   min-height: 222px;
-  outline: 1px solid yellow;
+  /*outline: 1px solid yellow;*/
 }
 
 .subscription-background {
@@ -915,23 +944,265 @@ body {
   /* Временно для сетки */
   width: 547px;
   min-height: 211px;
-  outline: 1px solid yellow;
+  /*outline: 1px solid yellow;*/
 }
 
 .post-title {
-margin: 20px;
-margin-top: 10px;
+  margin: 20px;
+  margin-top: 10px;
   /* Временно для сетки */
   width: 281px;
   min-height: 82px;
-  outline: 1px solid black;
+  /*outline: 1px solid black;*/
 }
 
 .post-new {
-margin: 20px;
-margin-bottom: 10px;
+  margin: 20px;
+  margin-bottom: 10px;
   /* Временно для сетки */
   width: 165px;
   min-height: 17px;
-  outline: 1px solid black;
+
+  /*outline: 1px solid black;*/
 }
+
+
+.subscription-form {
+  background: "#f8f7f4";
+  border-radius: 15px;
+  width: 550px;
+  height: 211px;
+  /*outline: 1px solid black;*/
+}
+
+.subscription-description {
+  margin: 20px;
+  margin-top: 39px;
+  margin-bottom: 37px;
+
+
+/* Временно для сетки */
+  width: 511px;
+  min-height: 62px;
+
+  /*outline: 1px solid black;*/
+}
+
+.subscription-email {
+  margin: 20px;
+  margin-bottom: 10px;
+
+/* Временно для сетки */
+  width: 512px;
+  min-height: 45px;
+
+  /*outline: 1px solid black;*/
+}
+
+.subscription-email input {
+  width:356px;
+  height:8px;
+  padding:18px 0;
+  padding-left: 15px;
+
+  border:1px solid #d3d3d2;
+  border-radius:6px;
+}
+
+.map {
+	background-image: url("../img/map.jpg");
+	width: 1200px;
+	height: 430px;
+}
+
+iframe {
+	margin-bottom: auto;
+	width: 1200px;
+	height: 430px;
+}
+
+.contacts {
+  padding-left: 27px;
+  padding-right: 27px;
+  margin-top: 40px;
+
+  display: flex;
+  flex-direction: column;
+
+  /* Временно для сетки */
+  background: none;
+  min-height: 430px;
+
+  /*outline: 1px solid blue;*/
+}
+
+.contacts-info {
+  margin-top: -365px;
+  margin-left: 870px;
+  width: 250px;
+  height: 265px;
+  background-color: rgb(255, 255, 255);
+  color: rgb(50, 50, 50);
+  padding: 15px 25px;
+  border-radius: 15px;
+
+  /*outline: 1px solid blue;*/
+}
+
+.contacts-button {
+  font-size: 18px;
+  line-height: 1.333;
+  margin-top: 10px;
+  padding-right: 25px;
+  padding-left: 25px;
+
+  /*outline: 1px solid blue;*/
+}
+
+.feedback {
+  width: 437px;
+  height: 444px;
+  background-color: rgb(255, 255, 255);
+  color: rgb(50, 50, 50);
+  padding: 0 25px;
+  border-radius: 5px;
+  display: none;
+
+  /*outline: 1px solid blue;*/
+}
+
+.feedback-slogan {
+  font-size: 24px;
+  line-height: 1.167;
+  color: rgb(50, 50, 50);
+  font-weight: bold;
+}
+
+.feedback .email-icon,
+.name-icon {
+  width:253px;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 5px;
+}
+
+.answer-icon {
+  width:420px;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 5px;
+
+  padding:10px 0;
+  padding-left: 15px;
+
+  border:1px solid #d3d3d2;
+  border-radius:6px;
+}
+
+.feedback-button {
+  font-size: 18px;
+  line-height: 1.333;
+  margin-top: 10px;
+  padding: 7px 25px;
+
+  /*outline: 1px solid blue;*/
+}
+
+/*
+.feedback-button:hover .feedback {
+  display: block;
+}*/
+
+.main-footer {
+  padding: 27px 54px;
+  padding-bottom: 10px;
+
+  /* Временно для сетки */
+  background: none;
+  min-height: 78px;
+
+  /*outline: 1px solid black;*/
+}
+
+.footer-wrapper {
+  display: flex;
+  min-height: 78px;
+
+  /* Временно для сетки */
+  /*outline: 1px solid green;*/
+}
+
+.footer-documentation {
+  width: 320px;
+  margin: 0;
+  padding: 0;
+   
+  display: flex;
+  /*flex-direction: column;**/
+  flex-wrap: wrap;
+
+  /* Временно для сетки */
+  height: 40px;
+  /*outline: 1px solid green;*/
+}
+
+.documentation-item {
+  width: 170px;
+  font-size: 13px;
+  line-height: 1.385;
+  margin: 0;
+  padding: 0;
+
+  /* Временно для сетки */
+  min-height: 16px;
+  /*outline: 1px solid white;*/
+
+}
+
+.documentation-item:first-child {
+  margin-left: -18px;
+  width: 160px;
+  padding: 0;
+}
+
+.documentation-item:nth-child(3n) {
+  width: 142px;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-social {
+  width: 188px;
+  padding-top: 20px;
+  margin-right: 225px;
+  
+
+  /* Временно для сетки */
+  min-height: 50px;
+  /*outline: 1px solid white;*/
+}
+
+.social-button {
+  padding-right: 15px;
+  font-size: 0px;
+}
+
+.footer-copyright {
+  width: 190px; 
+  margin: 0;
+  margin-left: auto;
+  font-size: 12px;
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+
+  /* Временно для сетки */
+  min-height: 48px;
+  /*outline: 1px solid white;*/
+}
+
+.footer-copyright p {
+	margin: 0;
+}
+
+
