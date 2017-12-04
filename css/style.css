@@ -116,7 +116,6 @@ a {
   font-weight: 800;
 }
 
-/*.button:not(.footer-button):not(.filter-button) {*/
 .button {
   display: inline-block;
   padding: 12px 44px;
@@ -139,12 +138,12 @@ a {
   cursor: pointer;
 }
 
-.button:not(.footer-button):not(.filter-button):hover {
+.button:hover {
   background: linear-gradient(to bottom, #f58669 0%, #ec6f5e 100%);
   box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
 }
 
-.button:not(.footer-button):not(.filter-button):active {
+.button:active {
   background: linear-gradient(to bottom, #d84732 0%, #e1613e 100%);
   box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
 }
@@ -289,7 +288,7 @@ a {
 }
 
 .popular-price,
-.catalog-list h3 {
+.catalog-price {
   font-size: 45px;
   line-height: 1;
   text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
@@ -469,27 +468,6 @@ a {
   line-height: 1.125;
 }
 
-.filter-button {
-  background-color: rgba(0.1, 0.1, 0.1, 0);
-  text-align: center;
-  color: #ffffff;
-  -webkit-border-radius: 30px;
-  border: 2px, solid, rgb(255, 255, 255);
-}
-
-.filter-button:hover,
-.filter-button:focus {
-  background-color: rgb(255, 255, 255);
-  color: rgb(50, 50, 50);
-  border: solid, 2px, rgb(255, 255, 255);
-}
-
-.filter-button:active {
-  background-color: #eaeaea;
-  color: rgb(50, 50, 50);
-  border: 2px, solid, rgb(255, 255, 255);
-}
-
 .pagination-list,
 .pagination-button {
   font-weight: normal;
@@ -520,7 +498,7 @@ display: block;
 }
 
 .login-form {
-  background-color: rgb(255, 255, 255);
+  background-color: #f8f7f4;
   color: rgb(50, 50, 50);
   padding: 5px 20px;
   border-radius: 5px;
@@ -582,7 +560,7 @@ body {
 
   /* Временно для сетки */
   min-height: 55px;
- /* outline: 1px solid red;*/
+  /*outline: 1px solid red;*/
 }
 
 .main-header-logo {
@@ -646,8 +624,35 @@ body {
   margin-left: 23px;
 }
 
-.navigation-search form {
+.navigation-search {
+    display: inline-block;
+}
+
+.navigation-search:hover .search-form {
+  display: block;
+}
+
+.search-form {
+  width: 312px;
+  height: 45px;
+
+  padding: 15px;
+  background: #f8f7f4;
+  border-radius: 5px;
   display: none;
+}
+
+.search {
+  width:315px;
+  font-size: 14px;
+  line-height: 1.714;
+
+  /*margin-bottom: 5px;  */
+  padding:10px 0;
+  padding-left: 15px;
+
+  border:1px solid #d3d3d2;
+  border-radius:6px;
 }
 
 .navigation-search a {
@@ -908,6 +913,7 @@ body {
 }
 
 .preview_post {
+  /*margin: 0;*/
   display: flex;
   flex-direction: column;
   
@@ -934,7 +940,7 @@ body {
   /* Временно для сетки */
   width: 560px;
   min-height: 222px;
-  /*outline: 1px solid yellow;*/
+ /* outline: 1px solid yellow;*/
 }
 
 .subscription-background {
@@ -968,10 +974,11 @@ body {
 
 
 .subscription-form {
-  background: "#f8f7f4";
+  background: #f8f7f4;
+  margin: 5px;
   border-radius: 15px;
   width: 550px;
-  height: 211px;
+  height: 218px;
   /*outline: 1px solid black;*/
 }
 
@@ -985,7 +992,7 @@ body {
   width: 511px;
   min-height: 62px;
 
-  /*outline: 1px solid black;*/
+ /* outline: 1px solid black;*/
 }
 
 .subscription-email {
@@ -1000,10 +1007,11 @@ body {
 }
 
 .subscription-email input {
-  width:356px;
+  width:355px;
   height:8px;
   padding:18px 0;
   padding-left: 15px;
+  margin-right: 6px;
 
   border:1px solid #d3d3d2;
   border-radius:6px;
@@ -1022,8 +1030,7 @@ iframe {
 }
 
 .contacts {
-  padding-left: 27px;
-  padding-right: 27px;
+  margin-left: -27px;
   margin-top: 40px;
 
   display: flex;
@@ -1031,6 +1038,7 @@ iframe {
 
   /* Временно для сетки */
   background: none;
+  width: 1200px;
   min-height: 430px;
 
   /*outline: 1px solid blue;*/
@@ -1038,13 +1046,14 @@ iframe {
 
 .contacts-info {
   margin-top: -365px;
-  margin-left: 870px;
+  margin-left: 875px;
   width: 250px;
   height: 265px;
   background-color: rgb(255, 255, 255);
   color: rgb(50, 50, 50);
   padding: 15px 25px;
   border-radius: 15px;
+  /*display: none;*/
 
   /*outline: 1px solid blue;*/
 }
@@ -1062,7 +1071,7 @@ iframe {
 .feedback {
   width: 437px;
   height: 444px;
-  background-color: rgb(255, 255, 255);
+  background-color: #f8f7f4;
   color: rgb(50, 50, 50);
   padding: 0 25px;
   border-radius: 5px;
@@ -1114,13 +1123,14 @@ iframe {
 }*/
 
 .main-footer {
-  padding: 27px 54px;
-  padding-bottom: 10px;
+  margin-top: 20px;
+  margin-bottom: 15px;
 
   /* Временно для сетки */
   background: none;
   min-height: 78px;
 
+  width: 1146px;
   /*outline: 1px solid black;*/
 }
 
@@ -1133,6 +1143,7 @@ iframe {
 }
 
 .footer-documentation {
+  /*margin-bottom: auto;*/
   width: 320px;
   margin: 0;
   padding: 0;
@@ -1147,11 +1158,13 @@ iframe {
 }
 
 .documentation-item {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 5px;
   width: 170px;
   font-size: 13px;
   line-height: 1.385;
-  margin: 0;
-  padding: 0;
+  
 
   /* Временно для сетки */
   min-height: 16px;
@@ -1160,11 +1173,15 @@ iframe {
 }
 
 .documentation-item:first-child {
+  margin-top: 20px;
   margin-left: -18px;
   width: 160px;
   padding: 0;
 }
 
+.documentation-item:nth-child(2) {
+  margin-top: 20px;
+}
 .documentation-item:nth-child(3n) {
   width: 142px;
   margin: 0;
@@ -1172,8 +1189,8 @@ iframe {
 }
 
 .footer-social {
+  margin-top: 20px;
   width: 188px;
-  padding-top: 20px;
   margin-right: 225px;
   
 
@@ -1201,8 +1218,469 @@ iframe {
   /*outline: 1px solid white;*/
 }
 
+.footer-copyright-logo {
+  height: 42px;
+}
 .footer-copyright p {
 	margin: 0;
 }
 
+/* ----- Сеточные стили каталога ----- */
+
+.basket {
+  display: inline-block;
+}
+
+.basket:hover .basket-form {
+  display: block;
+}
+
+.basket-form {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 20px;
+  padding-top: 25px;
+  background-color: #f8f7f4;
+  color: rgb(50, 50, 50);
+  border-radius: 5px;
+  display: none;
+
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+
+  /* Временно для сетки */
+  width: 535px;
+  min-height: 210px;
+  /*outline: 1px solid red;*/
+}
+
+.button-form,
+.pagination-button,
+.skroll_left,
+.skroll_right {
+  border: 0;
+  background: transparent;
+  font-size: 0;
+}
+
+.basket img {
+  border-radius: 100%;
+}
+
+.basket-item {
+  display: flex;
+  flex-direction: row;
+  padding-left: 5px;
+
+  /* Временно для сетки */
+  width: 500px;
+  min-height: 45px;
+ /* outline: 1px solid yellow;*/
+}
+
+.basket-item a,
+.basket-item {
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 1.231;
+}
+
+.basket-hr {
+  text-align: right;
+  width: 490px;
+  min-height: 10px;
+
+  /*outline: 1px solid yellow;*/
+}
+
+.basket-total {
+  display: flex;
+  font-size: 15px;
+  line-height: 1.2;
+
+  margin-left: 410px;
+  margin-bottom: 10px;
+  /* Временно для сетки */
+  width: 110px;
+  min-height: 20px;
+  /*outline: 1px solid yellow;*/
+}
+
+.basket-wrapper {
+  display: flex;
+  margin-left: auto;
+
+  width: 162px;
+  height: 40px;
+  /*outline: 1px solid yellow;*/
+}
+
+.basket-remove {
+  margin-right: 10px;
+  /* Временно для сетки */
+  width: 20px;
+  min-height: 45px;
+  /*outline: 1px solid pink;*/
+}
+
+.basket-product-img {
+  margin-right: 10px;
+  /* Временно для сетки */
+  width: 35px;
+  min-height: 45px;
+  /*outline: 1px solid pink;*/
+}
+
+.basket-product {
+  margin-right: 20px;
+  /* Временно для сетки */
+  width: 220px;
+  min-height: 45px;
+  /*outline: 1px solid pink;*/
+}
+
+.basket-product a,
+.basket-product a:hover,
+.basket-product a:focus {
+  margin: 0;
+  text-decoration: none;
+  color: rgb(50, 50, 50);
+  background: transparent;
+  display: block;
+}
+
+.basket-amount {
+  margin-right: 20px;
+  /* Временно для сетки */
+  width: 100px;
+  min-height: 45px;
+  /*outline: 1px solid pink;*/
+}
+
+.basket-price-kg {
+  color: #9f9f9f;
+}
+
+.basket-price {
+  /* Временно для сетки */
+  width: 55px;
+  min-height: 45px;
+  /*outline: 1px solid pink;*/
+}
+
+.basket-main-button {
+  font-size: 18px;
+  line-height: 1.333;
+  width: 162px;
+  height: 40px;
+  padding: 5px;
+}
+
+.breadcrumbs {
+  padding: 0;
+  margin: 0;
+  margin-top: -34px;
+  display: flex;
+  flex-direction: row;
+
+  /* Временно для сетки */
+  width: 1146px;
+  min-height: 24px;
+  /*outline: 1px solid pink;*/
+}
+
+.breadcrumbs-item {
+  padding-right: 10px;
+}
+
+.page-title {
+  margin: 0;
+  margin-bottom: 15px;
+  margin-top: -5px;
+  padding: 0;
+
+  /* Временно для сетки */
+  min-height: 30px;
+  /*outline: 1px solid pink;*/
+}
+
+.catalog-columns {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  /*outline: 1px solid red;*/
+}
+
+.filter {
+  width: 875px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  /* Временно для сетки */
+  min-height: 138px;
+  /*outline: 1px solid white;*/
+}
+
+.filter-sorting {
+  width: 195px;
+  padding: 0;
+  margin: 0;
+
+  /* Временно для сетки */
+  min-height: 63px;
+  /*outline: 1px solid pink;*/
+}
+
+.filter-price {
+  width: 225px;
+  padding: 0;
+  margin: 0;
+
+  /* Временно для сетки */
+  min-height: 61px;
+  /*outline: 1px solid pink;*/
+}
+
+.skroll {
+  width: 165px;
+  margin-left: 10px;
+  background: #d1dad3;
+  display: flex;
+  height: 5px;
+  margin-top: 20px;
+  position: relative;
+}
+
+.skroll_left {
+  margin-top: -10px;
+  margin-left: 5px;
+}
+
+.skroll_right {
+  margin-top: -10px;
+  margin-left: 55px;
+}
+
+.skroll_field {
+  width: 72px;
+  height: 5px;
+  background: #f8f7f4;
+  position: absolute;
+  left: 32px;
+}
+
+.filter-fatty {
+  width: 390px;
+  padding: 0;
+  margin: 0;
+
+  /* Временно для сетки */
+  min-height: 64px;
+  /*outline: 1px solid pink;*/
+}
+
+.filter-fillers {
+  width: 709px;
+  padding: 0;
+  margin: 0;
+
+  /* Временно для сетки */
+  min-height: 65px;
+  /*outline: 1px solid pink;*/
+}
+
+.fillers-list {
+  padding: 0;
+  margin: 0;
+  margin-top: 15px;
+  display: flex;
+  flex-direction: row;
+
+  /* Временно для сетки */
+  min-height: 65px;
+  /*outline: 1px solid white;*/
+}
+
+.fillers-item {
+  padding: 0;
+  margin: 0;
+  margin-right: 20px;
+  display: flex;
+
+  min-width: 98px;
+  min-height: 26px;
+  /*outline: 1px solid green;*/
+}
+
+.fatty {
+  margin: 0;
+  padding: 0;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  justify-content: space-between;
+}
+
+.filter-option {
+  padding: 0;
+  margin: 0;
+  margin-right: 15px;
+  display: flex;
+
+  min-width: 58px;
+  min-height: 26px;
+  /*outline: 1px solid pink;*/
+}
+
+.filter-label {
+  margin-top: 2px;
+  margin-left: 10px;
+}
+
+.catalog {
+  width: 1146px;
+
+  /* Временно для сетки */
+  min-height: 687px;
+  /*outline: 1px solid white;*/
+}
+
+.catalog-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+  min-height: 52px;
+  /*outline: 1px solid pink;*/
+}
+
+.catalog-item {
+  width: 267px;
+  margin-bottom: 20px;
+  margin-right: 26px;
+
+  /* Временно для сетки */
+  min-height: 325px;
+  /*outline: 1px solid pink;*/
+}
+
+.catalog-item:nth-child(4n) {
+  margin-right: 0;
+}
+
+.catalog-price img{
+  margin-top: -40px;
+  margin-left: -37px;
+  
+  display: block;
+}
+
+.catalog-weight {
+  display: block;
+  margin-left: 115px;
+  margin-top: -68px;
+  font-size: 28px;
+  text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5); 
+}
+
+.catalog-wrapper {
+  margin-top: -110px;
+  display: block;
+  min-width: 158px;
+  min-height: 37px;
+  /*outline: 1px solid yellow;*/
+}
+
+.catalog-description {
+  display: block;
+  margin-top: 35px;
+  min-width: 252px;
+  min-height: 41px;
+  /*outline: 1px solid yellow;*/
+}
+
+.catalog img {
+  border-radius: 100%;
+  min-width: 100%;
+  min-height: 100%;
+  /*outline: 1px solid yellow;*/
+}
+
+.pagination-button-back {
+  transform: rotate(180deg);
+}
+
+.pagination-list {
+  padding: 0;
+  margin: 0;
+  margin-top: 40px;
+  margin-left: auto;
+
+  display: flex;
+  list-style: none;
+
+  /* Временно для сетки */
+  width: 195px;
+  min-height: 35px;
+  /*outline: 1px solid yellow;*/
+}
+
+.pagination-item {
+  padding: 0;
+  margin: 0;
+  width: 30px;
+  text-align: center;
+  margin-bottom: 20px;
+
+  /* Временно для сетки */
+  min-height: 30px;
+  /*outline: 1px solid pink;*/
+}
+
+.pagination-item:first-child { 
+  text-align: left;
+}
+
+.pagination-item:last-child { 
+  text-align: right;
+}
+
+.pagination-button-next,
+.pagination-button-back {
+  padding: 0;
+  margin: 0;
+}
+
+.filter-button {
+  font-size: 16px;
+  line-height: 1.125;
+  padding: 2px;
+  margin-top: 25px;
+  margin-left: 25px;
+  background-color: #a6b7ae;
+  color: #ffffff;
+  border: 2px, solid, #a6b7ae;
+
+  width: 140px;
+  height: 35px;
+}
+
+.filter-button:hover,
+.filter-button:focus {
+  background-color: #a6b7ae;
+  color: rgb(50, 50, 50);
+  border: solid, 2px, #a6b7ae;
+}
+
+.filter-button:active {
+  background-color: #eaeaea;
+  color: rgb(50, 50, 50);
+  border: 2px, solid, #a6b7ae;
+}
 
