@@ -30,6 +30,7 @@ a {
 
 .site-navigation a,
 .user-navigation a {
+  position: relative;
   text-decoration: underline;
   color:red;
   color: rgb(255, 255, 255);
@@ -42,6 +43,9 @@ a {
   text-decoration: none;
   color: rgb(50, 50, 50);
   background-color: rgb(247, 246, 243);
+  position: relative;
+  padding: 5px 15px;
+  border-radius: 20px;
 }
 
 /* ----- Слайдер ----- */
@@ -199,8 +203,16 @@ a {
   background-color: #ffffff;
 }
 
-.catalog-variants {
-  box-shadow: 2px 8px 20px 5px rgba(0, 0, 0, 0.3);
+.site-navigation a {
+  margin-right: 26px;
+
+}
+
+.catalog-variants a {
+  margin: 0;
+  background-color: #f8f7f4;
+  color: rgb(50, 50, 50);
+  text-decoration: none;
 }
 
 .catalog-variants a:hover {
@@ -211,27 +223,42 @@ a {
   background-color: #f6b5a5;
 }
 
+.catalog-variants-item {
+  padding-top: 10px;
+}
+
 .navigation-catalog {
-  display: inline-block;
+  position: relative;
 }
 
-.navigation-catalog:hover .catalog-variants a {
-  display: block;
+.catalog-variants {
+  position: absolute;
+  top: 30px;
+  left: -9999px;
+
+  box-shadow: 0 15px 20px 5px rgba(0, 0, 0, 0.35);
 }
 
-.catalog-variants a {
-  font-weight: normal;
-  text-decoration: none;
-  background-color: rgb(255, 255, 255);
-  color: rgb(50, 50, 50);
-  display: none;
+.catalog-variants {
+  padding-left: 20px;
+  padding-right: 10px;
+  padding-bottom: 15px;
+  width: 115px;
+  font-size: 14px;
+  font-weight: normal;  
+  background-color: #f8f7f4; 
+  border-radius: 5px;
 }
 
-/* не работает */
-.catalog-variants ul li:first-child {
+.navigation-catalog:hover .catalog-variants  {
+  left: -20px;
+}
+
+.catalog-variants li:first-child {
+  padding-bottom: 10px;
   font-weight: bold;
   background-color: #f8f7f4;
-  color: rgb(50, 50, 50);
+  border-bottom: 1px solid #d1d0ce;
 }
 
 .login-password-info a{
@@ -405,14 +432,18 @@ a {
 .site-navigation-current a {
   text-decoration: none;
   background-color: rgb(208, 112, 88);
+  position: relative;
+  padding: 5px 15px;
+  boder: 1 solid rgb(208, 112, 88);
+  border-radius: 20px;
 }
 
 .site-navigation-current {
-  display: inline-block;
+  position: relative;
 }
 
-.site-navigation-current:hover .catalog-variants a {
-  display: block;
+.site-navigation-current:hover .catalog-variants {
+  left: -20px;
 }
 
 .container h1 {
@@ -430,6 +461,9 @@ a {
   color: rgb(255, 255, 255);
   line-height: 1.143;
   text-decoration: underline;
+  position: relative;
+  padding: 5px 15px;
+  border-radius: 20px;
 }
 
 .breadcrumbs.breadcrumbs-current a{
@@ -490,11 +524,7 @@ a {
 }
 
 .login-link {
-    display: inline-block;
-}
-
-.login-link:hover .login-form {
-display: block;
+  position: relative;
 }
 
 .login-form {
@@ -502,7 +532,14 @@ display: block;
   color: rgb(50, 50, 50);
   padding: 5px 20px;
   border-radius: 5px;
-  display: none;
+  position: absolute;
+  top: 40px;
+  left: -9999px;
+  box-shadow: 0 15px 20px 5px rgba(0, 0, 0, 0.35);
+}
+
+.login-link:hover .login-form {
+  left: -155px;
 }
 
 .email-icon,
@@ -585,10 +622,7 @@ body {
   /*outline: 1px solid yellow;*/
 }
 
-.site-navigation a {
-  margin-right: 26px;
 
-}
 
 .user-navigation {
   margin: 0;
@@ -603,6 +637,7 @@ body {
   /* Временно для сетки */
   min-height: 70px;
   /*outline: 1px solid yellow;*/
+
 }
 
 .time-wrapper {
@@ -625,11 +660,8 @@ body {
 }
 
 .navigation-search {
-    display: inline-block;
-}
-
-.navigation-search:hover .search-form {
-  display: block;
+  font-size: 0;
+  position: relative;
 }
 
 .search-form {
@@ -639,8 +671,16 @@ body {
   padding: 15px;
   background: #f8f7f4;
   border-radius: 5px;
-  display: none;
+  position: absolute;
+  top: 42px;
+  left: -9999px;
+  box-shadow: 0 15px 20px 5px rgba(0, 0, 0, 0.35);
 }
+
+.navigation-search:hover .search-form {
+  left: -250px;
+}
+
 
 .search {
   width:315px;
@@ -653,10 +693,6 @@ body {
 
   border:1px solid #d3d3d2;
   border-radius:6px;
-}
-
-.navigation-search a {
-  /*font-size: 0;*/
 }
 
 .slider {
@@ -1228,11 +1264,7 @@ iframe {
 /* ----- Сеточные стили каталога ----- */
 
 .basket {
-  display: inline-block;
-}
-
-.basket:hover .basket-form {
-  display: block;
+  position: relative;
 }
 
 .basket-form {
@@ -1243,16 +1275,26 @@ iframe {
   background-color: #f8f7f4;
   color: rgb(50, 50, 50);
   border-radius: 5px;
-  display: none;
 
   display: flex;
   flex-direction: column;
   list-style: none;
+  position: absolute;
+  top: 30px;
+  left: -9999px;
 
   /* Временно для сетки */
-  width: 535px;
+  width: 525px;
   min-height: 210px;
   /*outline: 1px solid red;*/
+}
+
+.basket:hover .basket-form {
+  left: -415px;
+}
+
+.basket-item-2 {
+  border-bottom: 1px solid #d1d0ce;
 }
 
 .button-form,
@@ -1299,8 +1341,9 @@ iframe {
   font-size: 15px;
   line-height: 1.2;
 
-  margin-left: 410px;
-  margin-bottom: 10px;
+  margin: 10px 0;
+  margin-left: 395px;
+  
   /* Временно для сетки */
   width: 110px;
   min-height: 20px;
@@ -1414,7 +1457,7 @@ iframe {
 }
 
 .filter {
-  width: 875px;
+  width: 895px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -1428,16 +1471,27 @@ iframe {
   width: 195px;
   padding: 0;
   margin: 0;
+  padding-top: 5px;
 
   /* Временно для сетки */
   min-height: 63px;
   /*outline: 1px solid pink;*/
 }
 
+.sorting,
+.fatty,
+.fillers-list {
+  padding: 7px 10px;
+  background-color: rgba(255,255,255, 0.2);
+  color: white;
+  border-radius: 20px;
+}
+
 .filter-price {
-  width: 225px;
+  width: 200px;
   padding: 0;
   margin: 0;
+  margin-left: 30px;
 
   /* Временно для сетки */
   min-height: 61px;
@@ -1473,9 +1527,12 @@ iframe {
 }
 
 .filter-fatty {
-  width: 390px;
+  width: 415px;
   padding: 0;
   margin: 0;
+  padding-top: 5px;
+  margin-left: 10px;
+  padding-left: 20px;
 
   /* Временно для сетки */
   min-height: 64px;
@@ -1483,7 +1540,7 @@ iframe {
 }
 
 .filter-fillers {
-  width: 709px;
+  width: 705px;
   padding: 0;
   margin: 0;
 
@@ -1495,12 +1552,14 @@ iframe {
 .fillers-list {
   padding: 0;
   margin: 0;
-  margin-top: 15px;
+  padding-left: 15px;
+  padding-top: 6px;
+  margin-top: 5px;
   display: flex;
   flex-direction: row;
 
   /* Временно для сетки */
-  min-height: 65px;
+  min-height: 27px;
   /*outline: 1px solid white;*/
 }
 
@@ -1515,10 +1574,14 @@ iframe {
   /*outline: 1px solid green;*/
 }
 
+.fillers-item:last-child {
+  margin: 0;
+}
+
 .fatty {
   margin: 0;
-  padding: 0;
-  margin-top: 10px;
+  padding-left: 15px;
+  padding-right: 5px;
   display: flex;
   flex-direction: row;
   list-style: none;
@@ -1532,7 +1595,7 @@ iframe {
   display: flex;
 
   min-width: 58px;
-  min-height: 26px;
+  min-height: 20px;
   /*outline: 1px solid pink;*/
 }
 
