@@ -28,7 +28,6 @@ a {
   list-style: none;
 }
 
-
 .site-navigation,
 .catalog-variants {
   padding: 0;
@@ -121,7 +120,7 @@ a {
   display: none;
 }
 ​  
-.navigation-link:hover .catalog-variants{
+.site-navigation-current:hover .catalog-variants{
   left: 2px;
 }
 
@@ -1730,7 +1729,7 @@ iframe {
   top: 6px;
   left: 6px;
   border-radius: 50%;
-  background: white;
+  background: rgba(255, 255, 255, 0.7);
   display: none;
 }
 
@@ -1739,11 +1738,20 @@ iframe {
   content: "";
   width: 16px;
   height: 16px;
-  border: 3px solid white;
+  border: 3px solid rgba(255, 255, 255, 0.7);
   left: 0;
   top: 0;
   border-radius: 50%;
   cursor: pointer;
+}
+
+.fatty .filter-label:hover::after{
+  border: 3px solid white;
+}
+
+.fatty .filter-label:hover::before,
+.filter-fillers .filter-label:hover::before {
+  background: white;
 }
 
 .fatty .filter-input-radio:checked + .filter-label::before {
@@ -1822,45 +1830,49 @@ iframe {
   position: relative;
   min-width: 15px;
   cursor: pointer;
+
+    
 }
 
 .filter-fillers .filter-label::before {
   position: absolute;
   content: "";
-  width: 23px;
-  height: 23px;
-  top: 0;
+  width: 19px;
+  height: 19px;
+  top: 3;
   left: 0;
   border: 0;
-  background-image: url("../img/checkbox-on.svg");
-  background-size: 23px 23px;
-  background-position: center;
-  background-repeat: no-repeat;
-  display: none;
+  background: rgba(255, 255, 255, 0.7);
+  -webkit-clip-path: polygon(50% 70%, 90% 14%, 100% 28%, 47% 100%, 20% 60%, 25% 42%);
+  clip-path: polygon(50% 70%, 90% 14%, 100% 28%, 47% 100%, 20% 60%, 25% 42%);
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition: transform .3s;
+  transition: transform .3s;
 }
 
 .filter-fillers .filter-label::after {
   position: absolute;
   content: "";
-  width: 21px;
-  height: 21px;
+  width: 16px;
+  height: 16px;
   border: 0;
-  background-image: url("../img/checkbox-off.svg");
-  background-size: 20px 20px;
-  background-position: center;
-  background-repeat: no-repeat;
   left: 0;
   top: 0;
-  border-radius: 5px;
+  border-radius: 3px;
   cursor: pointer;
+
+  border: 2px solid rgba(255, 255, 255, 0.7);;
+  text-align: center;   
 }
 
-.filter-fillers .filter-input-checkbox:unchecked + .filter-label::after {
-  display: block;
+.filter-fillers .filter-label:hover::after{
+  border: 2px solid white;
 }
 
 .filter-fillers .filter-input-checkbox:checked + .filter-label::before {
-  display: block;
+  -webkit-transform: scale(1);
+  transform: scale(1);
 }
 
 .catalog {
