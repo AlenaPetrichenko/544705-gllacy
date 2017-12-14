@@ -139,12 +139,14 @@ a {
 }
 
 .slide-title {
-  width: 700px;
-  margin: 0 auto;
+  text-align: center;
+  width: 720px;
+  margin: 0;
+  margin-left: -10px;
   margin-bottom: 27px;
   font-size: 60.468px;
   line-height: 1.006;
-  font-weight: 800;
+  font-weight: 700;
 }
 
 .button {
@@ -251,6 +253,9 @@ a {
 }
 
 .work_time {
+  position: absolute;
+  top: 20px;
+  left: 8px;
  	font-size: 14px;
   	line-height: 1.143;
 }
@@ -321,6 +326,7 @@ a {
 
 .preview_post h2 {
   font-size: 24px;
+  font-weight: 500;
   text-decoration: underline;
   color: rgb(50, 50, 50);
   line-height: 1.25;
@@ -356,6 +362,15 @@ a {
   font-weight: normal;
   color: rgb(50, 50, 50);
   line-height: 1.429;
+}
+
+.contacts-address,
+.phone-label {
+  margin-bottom: 5px;
+}
+
+.contacts-time {
+  margin-top: 2px;
 }
 
 .contacts-address b,
@@ -500,6 +515,14 @@ a {
   background-color: rgba(255, 255, 255, 0.3);
 }
 
+.pagination-item a:active {
+  position: relative;
+  padding: 3px 8px;
+  border-radius: 50%;
+  color: rgb(50, 50, 50);
+  background-color: rgb(255, 255, 255);
+}
+
 .pagination-button:hover,
 .pagination-button:focus {
   padding: 5px 8px;
@@ -532,7 +555,7 @@ a {
 }
 
 .login-link:hover .login-form {
-  left: -155px;
+  left: -175px;
 }
 
 .email-icon,
@@ -646,18 +669,17 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: justify;
+  /*-webkit-box-pack: justify;
       -ms-flex-pack: justify;
-          justify-content: space-between;
+          justify-content: space-between;*/
 
   list-style: none;
 
   /* Временно для сетки */
-  width: 385px;
+  width: 395px;
   min-height: 70px;
   /*outline: 1px solid yellow;*/
 }
-
 
 .user-navigation {
   margin: 0;
@@ -824,7 +846,7 @@ body {
   list-style: none;
 
   /* Временно для сетки */
-  width: 167px;
+  width: 175px;
   min-height: 43px;
   /*outline: 1px solid yellow;*/
 }
@@ -835,7 +857,7 @@ body {
 
 .work_time-day {
   position: absolute;
-  left: 16px;
+  left: 21px;
   top: -2px;
 }
 
@@ -845,7 +867,7 @@ body {
 }
 
 .search-form {
-  width: 312px;
+  min-width: 312px;
   height: 45px;
 
   padding: 15px;
@@ -856,10 +878,11 @@ body {
   left: -9999px;
   -webkit-box-shadow: 0 15px 20px 5px rgba(0, 0, 0, 0.35);
           box-shadow: 0 15px 20px 5px rgba(0, 0, 0, 0.35);
+  z-index: 29;
 }
 
 .navigation-search:hover .search-form {
-  left: -250px;
+  left: -310px;
 }
 
 .search {
@@ -944,19 +967,19 @@ body {
   list-style: none;
 
   /* Временно для сетки */
-  width: 560;
   min-height: 225px;
   /*outline: 1px solid red;*/
 }
 
 .promotion-item {
+  position: relative;
   display: inline-block;
   vertical-align: top;
   border-radius: 15px;
 
   /* Временно для сетки */
   width: 560px;
-  min-height: 210px;
+  min-height: 225px;
   /*outline: 1px solid yellow;*/
 }
 
@@ -989,9 +1012,12 @@ body {
 }
 
 .promotion-wrapper {
-  margin-top: 43px;
+  position: absolute;
+  left: 345px;
+  top: 160px;
+  /*margin-top: 43px;
   margin-left: auto;
-  margin-right: 25px;
+  margin-right: 25px;*/
   display:-webkit-box;
   display:-ms-flexbox;
   display:flex;
@@ -1000,7 +1026,7 @@ body {
           justify-content: flex-end;
 
   /* Временно для сетки */
-  width: 190px;
+  min-width: 190px;
   min-height: 44px;
   /*outline: 1px solid green;*/
 }
@@ -1146,8 +1172,9 @@ body {
 .popular-description {
   position: absolute;
   display: block;
+  left: 7px;
   top: 282px;
-  min-width: 252px;
+  width: 250px;
   min-height: 31px;
   /*outline: 1px solid yellow;*/
 }
@@ -1224,16 +1251,23 @@ body {
 
   /* Временно для сетки */
   width: 51px;
-  min-height: 51px;
+  height: 51px;
   /*outline: 1px solid white;*/
 }
 
 .advantages-item p {
-	margin-top: 10px;
+	margin-top: 7px;
   /* Временно для сетки */
-  width: 478px;
+  width: 479px;
   min-height: 60px;
   /*outline: 1px solid white;*/
+}
+
+.advantages-item:nth-child(3){
+  margin-top: -4px;
+}
+.advantages-item:nth-child(4){
+  margin-top: -4px;
 }
 
 .blog-wrapper {
@@ -1318,7 +1352,7 @@ body {
   margin-top: 23px;
   margin-bottom: 5px;
   /* Временно для сетки */
-  width: 165px;
+  min-width: 165px;
   min-height: 17px;
 
   /*outline: 1px solid black;*/
@@ -1328,7 +1362,7 @@ body {
   background: #f8f7f4;
   margin: 5px;
   border-radius: 15px;
-  width: 550px;
+  min-width: 550px;
   min-height: 210px;
   /*outline: 1px solid black;*/
 }
@@ -1370,6 +1404,7 @@ body {
 }
 
 .map {
+  position: relative;
 	background-image: url("../img/map.png");
 	width: 1200px;
 	height: 430px;
@@ -1404,8 +1439,9 @@ iframe {
 }
 
 .contacts-info {
-  margin-top: -367px;
-  margin-left: 870px;
+  position: absolute;
+  top: 50px;
+  left: 100px;
   width: 250px;
   height: 275px;
   display: -webkit-box;
@@ -1419,13 +1455,10 @@ iframe {
   color: rgb(50, 50, 50);
   padding: 15px 25px;
   border-radius: 15px;
+  z-index: 31;
   /*display: none;*/
 
   /*outline: 1px solid blue;*/
-}
-
-.contacts-phone {
-  margin-top: 10px;
 }
 
 .contacts-button {
@@ -1793,7 +1826,7 @@ iframe {
   margin-left: 395px;
 
   /* Временно для сетки */
-  width: 110px;
+  min-width: 110px;
   min-height: 20px;
   /*outline: 1px solid yellow;*/
 }
@@ -1970,6 +2003,10 @@ iframe {
   background-color: rgba(255,255,255, 0.2);
   color: white;
   border-radius: 20px;
+}
+
+.filter-sorting select:hover {
+  color: black;
 }
 
 .filter-price {
@@ -2498,6 +2535,10 @@ iframe {
 
 .catalog-variants li a:hover {
   background: #fbded8;
+}
+
+.catalog-variants li a:active {
+  background: #f6b5a5;
 }
 
 .catalog-variants li:first-child a {
